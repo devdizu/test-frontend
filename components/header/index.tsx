@@ -10,8 +10,8 @@ interface Props {
 export default class Header extends React.Component<Props> {
   render() {
     return (
-      <div className={"bg-yellow " + this.props.className}>
-        <div className={"max-w-screen-lg mx-auto px-3 h-12 flex items-center"}>
+      <div className={"bg-yellow " + (this.props.className ?? "")}>
+        <div className={"container mx-auto max-w-screen-lg px-3 h-12 flex items-center"}>
           <Image
             className="flex-shrink-0"
             src="/images/ml-logo.svg"

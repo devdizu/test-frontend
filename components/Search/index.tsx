@@ -14,7 +14,7 @@ export default class Search extends React.Component<Props> {
         <input
           type="text"
           id="inputSearch"
-          className={"px-3 text-xs flex-grow " + style.inputSearch}
+          className={"px-3 text-sm flex-grow " + style.inputSearch}
           placeholder="Nunca dejes de buscar"
           defaultValue={this.props.searchQuery ?? ""}
         />

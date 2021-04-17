@@ -2,6 +2,8 @@ import React from "react";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { ParsedUrlQuery } from "querystring";
 import Layout from "../../components/layout";
+import Breadcrumb from "../../components/breadcrumb";
+import Image from "next/image";
 
 interface Props {
   item: any;
@@ -12,7 +14,22 @@ export default class Item extends React.Component<Props> {
     console.log("items", this.props);
     return (
       <Layout>
-        <h1>Detail Item Component</h1>
+        <Breadcrumb />
+        <div className="p-3 bg-white shadow-md rounded-sm">
+          <div className="flex flex-row">
+            <div className="flex-grow">
+              <Image
+                className="relative"
+                src="/images/ml-logo.svg"
+                alt="Mercadolibre"
+                layout="responsive"
+                width={700}
+                height={475}
+              />
+            </div>
+            <div>OK</div>
+          </div>
+        </div>
       </Layout>
     );
   }
