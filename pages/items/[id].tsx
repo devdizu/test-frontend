@@ -1,7 +1,7 @@
 import React from "react";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { ParsedUrlQuery } from "querystring";
-import Search from "../../components/Search";
+import Layout from "../../components/layout";
 
 interface Props {
   item: any;
@@ -11,10 +11,9 @@ export default class Item extends React.Component<Props> {
   render() {
     console.log("items", this.props);
     return (
-      <>
-        <Search></Search>
+      <Layout>
         <h1>Detail Item Component</h1>
-      </>
+      </Layout>
     );
   }
 }

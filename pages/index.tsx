@@ -1,12 +1,12 @@
 import React from "react";
-import Search from "../components/Search";
+import Layout from "../components/layout";
 
 export default class Page extends React.Component {
   render() {
     return (
-      <>
-        <Search></Search>
-      </>
+      <Layout>
+        <h1>Welcome!</h1>
+      </Layout>
     );
   }
 }
