@@ -6,10 +6,10 @@ module.exports = {
     extend: {},
     colors: {
       yellow: {
-        DEFAULT: '#fff159',
+        DEFAULT: "#fff159",
       },
       blue: {
-        DEFAULT: '#3483fa',
+        DEFAULT: "#3483fa",
       },
       white: colors.white,
       transparent: "transparent",

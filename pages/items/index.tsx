@@ -5,10 +5,11 @@ import Layout from "../../components/layout";
 import Breadcrumb from "../../components/breadcrumb";
 import ListItem from "../../components/list-item";
 import { getMostRepeatedCategory } from "../../util/util";
+import itemsService from "../../services/items-service";
 
 interface Props {
   search?: any;
-  categories: any;
+  categories: string[];
   items: any[];
 }
 
@@ -20,11 +21,10 @@ export default class Items extends React.Component<Props> {
   }
 
   render() {
-    console.log("props", this.props);
     return (
       <Layout searchQuery={this.props.search}>
         <Breadcrumb category={getMostRepeatedCategory(this.props.categories)} />
-        <ul className="px-3 bg-white shadow-md rounded-sm">
+        <ul className="lg:mb-10 px-3 bg-white shadow-md rounded-sm">
           {this.renderListItems(this.props.items, this.props.categories)}
         </ul>
       </Layout>
@@ -40,9 +40,7 @@ export const getServerSideProps: GetServerSideProps<IParams> = async ({
   query,
 }) => {
   const search = (query.hasOwnProperty("search") ? query.search : "") as string;
-  const data = await fetch(
-    `http://localhost:3000/api/items?q=${search}`
-  ).then((response) => response.json());
+  const data = await itemsService.getItems(search);
   return {
     props: { search, ...data },
   };
