@@ -31,7 +31,7 @@ export default class Item extends React.Component<Props> {
     };
     return (
       <Layout>
-        <Breadcrumb category=""/>
+        <Breadcrumb category="FALTA" itemTitle={titleItem.title} />
         <div className="p-7 bg-white shadow-md rounded-sm">
           <div className="flex flex-col lg:flex-row">
             <ContentItem
