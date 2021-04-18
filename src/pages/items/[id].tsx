@@ -1,7 +1,7 @@
 import React from "react";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { ParsedUrlQuery } from "querystring";
-import Layout from "../../components/layout";
+import Layout from "../../layout";
 import Breadcrumb from "../../components/breadcrumb";
 import ContentItem from "../../components/detail-item/content-item";
 import TitleItem from "../../components/detail-item/title-item";

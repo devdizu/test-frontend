@@ -30,18 +30,23 @@ class Search extends React.Component<Props, State> {
   render() {
     return (
       <form
+        id="formSearch"
         className={"p-0.5 h-8 bg-white flex " + this.props.className}
         onSubmit={this.handleSubmit}
       >
         <input
           type="text"
+          ref="inputSearch"
           id="inputSearch"
           className={"px-3 text-sm flex-grow " + style.inputSearch}
           placeholder="Nunca dejes de buscar"
           value={this.state.query}
           onChange={this.handleChange}
         />
-        <button type="submit" className="w-8 flex-shrink-0 bg-gray-200">
+        <button
+          type="submit"
+          className="w-8 flex-shrink-0 bg-gray-200"
+        >
           <Image
             src="/images/search.svg"
             alt="Mercadolibre"
@@ -55,3 +60,4 @@ class Search extends React.Component<Props, State> {
 }
 
 export default withRouter(Search);
+// export default Search;

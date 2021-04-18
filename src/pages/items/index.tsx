@@ -1,7 +1,7 @@
 import { GetServerSideProps } from "next";
 import React from "react";
 import { ParsedUrlQuery } from "querystring";
-import Layout from "../../components/layout";
+import Layout from "../../layout";
 import Breadcrumb from "../../components/breadcrumb";
 import ListItem from "../../components/list-item";
 import { getMostRepeatedCategory } from "../../util/util";
