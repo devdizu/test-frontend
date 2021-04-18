@@ -1,4 +1,4 @@
-import "../styles/globals.scss";
+import "../../styles/globals.scss";
 import "tailwindcss/tailwind.css";
 
 const App = ({ Component, pageProps }) => {
