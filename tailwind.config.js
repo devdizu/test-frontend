@@ -8,6 +8,9 @@ module.exports = {
       yellow: {
         DEFAULT: '#fff159',
       },
+      blue: {
+        DEFAULT: '#3483fa',
+      },
       white: colors.white,
       transparent: "transparent",
       current: "currentColor",

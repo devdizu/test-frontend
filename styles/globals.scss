@@ -11,3 +11,14 @@ body,
   display: flex;
   flex-direction: column;
 }
+
+.btn {
+  @apply rounded px-5 py-2;
+}
+
+.btn-blue {
+  @apply bg-blue text-white;
+}
+.btn-blue:hover {
+  @apply bg-blue;
+}
